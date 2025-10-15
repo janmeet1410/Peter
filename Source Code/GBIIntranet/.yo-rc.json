@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "version": "1.14.0",
+    "libraryName": "gbi-intranet",
+    "libraryId": "b75dd97e-1d90-4f47-a40b-a8f82fef6acc",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "gbi-intranet",
+    "solutionShortDescription": "gbi-intranet description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

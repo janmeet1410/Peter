@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "banner-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/banner/BannerWebPart.js",
+          "manifest": "./src/webparts/banner/BannerWebPart.manifest.json"
+        }
+      ]
+    },
+    "document-library-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/documentLibrary/DocumentLibraryWebPart.js",
+          "manifest": "./src/webparts/documentLibrary/DocumentLibraryWebPart.manifest.json"
+        }
+      ]
+    },
+    "poilicies-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/poilicies/PoiliciesWebPart.js",
+          "manifest": "./src/webparts/poilicies/PoiliciesWebPart.manifest.json"
+        }
+      ]
+    },
+    "org-chart-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/orgChart/OrgChartWebPart.js",
+          "manifest": "./src/webparts/orgChart/OrgChartWebPart.manifest.json"
+        }
+      ]
+    },
+    "vision-mission-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/visionMission/VisionMissionWebPart.js",
+          "manifest": "./src/webparts/visionMission/VisionMissionWebPart.manifest.json"
+        }
+      ]
+    },
+    "executive-team-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/executiveTeam/ExecutiveTeamWebPart.js",
+          "manifest": "./src/webparts/executiveTeam/ExecutiveTeamWebPart.manifest.json"
+        }
+      ]
+    },
+    "social-media-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/socialMedia/SocialMediaWebPart.js",
+          "manifest": "./src/webparts/socialMedia/SocialMediaWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "BannerWebPartStrings": "lib/webparts/banner/loc/{locale}.js",
+    "DocumentLibraryWebPartStrings": "lib/webparts/documentLibrary/loc/{locale}.js",
+    "PoiliciesWebPartStrings": "lib/webparts/poilicies/loc/{locale}.js",
+    "OrgChartWebPartStrings": "lib/webparts/orgChart/loc/{locale}.js",
+    "VisionMissionWebPartStrings": "lib/webparts/visionMission/loc/{locale}.js",
+    "ExecutiveTeamWebPartStrings": "lib/webparts/executiveTeam/loc/{locale}.js",
+    "SocialMediaWebPartStrings": "lib/webparts/socialMedia/loc/{locale}.js"
+  }
+}

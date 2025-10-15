@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "gbi-intranet-client-side-solution",
+    "id": "b75dd97e-1d90-4f47-a40b-a8f82fef6acc",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "gbi-intranet description"
+      },
+      "longDescription": {
+        "default": "gbi-intranet description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "gbi-intranet Feature",
+        "description": "The feature that activates elements of the gbi-intranet solution.",
+        "id": "776c908e-9895-4fc6-b093-02fa882a7ac6",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/gbi-intranet.sppkg"
+  }
+}
