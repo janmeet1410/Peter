@@ -1,12 +1,12 @@
-*{
-font-family: sans-serif;
+* {
+  font-family: sans-serif;
 }
 .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(135deg, #0047ab 0%, #f1c40f 100%);
-  background-image: url('../assets/Images/bg.png');
+  background-image: url("../assets/Images/bg.png");
   color: white;
   padding: 20px 80px;
   flex-wrap: wrap;
@@ -30,8 +30,8 @@ font-family: sans-serif;
 }
 
 .hero-image img {
-    max-width: 415px;
-    border-radius: 8px;
+  max-width: 415px;
+  border-radius: 8px;
 }
 
 /* CARD SECTION */
@@ -41,21 +41,21 @@ font-family: sans-serif;
   flex-wrap: wrap;
   gap: 25px;
   padding: 40px 60px;
-margin-top: -54px;
-    margin: -80px auto 0 auto;
+  margin-top: -54px;
+  margin: -80px auto 0 auto;
 }
 
 .quicklinks .card {
-background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    width: 140px;
-    height: 100px;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.2s 
-ease, box-shadow 0.2s 
-ease;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 140px;
+  height: 100px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: black;
 }
 
 .quicklinks .card img {
@@ -65,10 +65,9 @@ ease;
 }
 
 .quicklinks .card p {
-    font-weight: 600;
-    margin: 0;
-    font-size: 16px;
-
+  font-weight: 600;
+  margin: 0;
+  font-size: 16px;
 }
 
 .quicklinks .card:hover {

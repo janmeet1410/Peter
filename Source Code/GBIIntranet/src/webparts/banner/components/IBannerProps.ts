@@ -4,4 +4,5 @@ export interface IBannerProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  bannerdescription: any;
 }

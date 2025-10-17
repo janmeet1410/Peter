@@ -67,6 +67,8 @@
     "OrgChartWebPartStrings": "lib/webparts/orgChart/loc/{locale}.js",
     "VisionMissionWebPartStrings": "lib/webparts/visionMission/loc/{locale}.js",
     "ExecutiveTeamWebPartStrings": "lib/webparts/executiveTeam/loc/{locale}.js",
-    "SocialMediaWebPartStrings": "lib/webparts/socialMedia/loc/{locale}.js"
+    "SocialMediaWebPartStrings": "lib/webparts/socialMedia/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }

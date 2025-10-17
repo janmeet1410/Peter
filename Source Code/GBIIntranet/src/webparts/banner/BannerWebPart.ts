@@ -11,9 +11,11 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'BannerWebPartStrings';
 import Banner from './components/Banner';
 import { IBannerProps } from './components/IBannerProps';
+import { sp } from "@pnp/sp/presets/all";
 
 export interface IBannerWebPartProps {
   description: string;
+  bannerdescription: string;
 }
 
 export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartProps> {
@@ -23,6 +25,8 @@ export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartP
 
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
+    // @pnp/sp inital setup
+    sp.setup({ spfxContext: this.context });
 
     return super.onInit();
   }
@@ -35,7 +39,8 @@ export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartP
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        bannerdescription: this.properties.bannerdescription ? this.properties.bannerdescription : "Discover GBI's Leading Institutional Grade Physical Precious Metals Platform.",
       }
     );
 
@@ -77,15 +82,14 @@ export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartP
     return {
       pages: [
         {
-          header: {
-            description: strings.PropertyPaneDescription
-          },
           groups: [
             {
-              groupName: strings.BasicGroupName,
+              groupName: "Banner",
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                PropertyPaneTextField('bannerdescription', {
+                  label: "Banner Description",
+                  multiline: true,
+                  rows: 3
                 })
               ]
             }
