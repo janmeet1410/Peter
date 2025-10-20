@@ -37,7 +37,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-.overlay {
+.library-card .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, rgba(0, 65, 175, 0.8) 0%, rgba(255, 215, 0, 0.5) 100%),
@@ -46,25 +46,25 @@
     background-repeat: no-repeat;
 }
 
-.content {
+.content1 {
   position: relative;
   z-index: 2;
   padding: 25px;
 }
 
-.content h3 {
+.library-section  .content1 h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
-.content ul {
+.library-section .content1 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.content ul li {
+.library-section .content1 ul li {
   font-size: 16px;
   margin-bottom: 8px;
   display: flex;

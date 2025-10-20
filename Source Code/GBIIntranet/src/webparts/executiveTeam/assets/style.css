@@ -1,0 +1,65 @@
+.team {
+  text-align: left;
+}
+
+.team h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.team-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dfe9f3 0%, #ffffff 100%);
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.team-card .overlay {
+     backdrop-filter: blur(10px);
+    margin-top: -45px;
+    height: 71px;
+    text-align: center;
+    color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -55px;
+    border-radius: 10px;
+    border: 1px solid #a4a4a4;
+    margin-bottom: 15px;
+}
+
+.team-card .overlay h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+      margin: 10px 0 7px 0;
+}
+
+.team-card .overlay p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Gradient background effect like in your screenshot */
+.team-card {
+  /* background: linear-gradient(135deg, rgba(0,65,175,0.8) 0%, rgba(255,215,0,0.5) 100%);
+   */
+   background-image: url('../assets/bg.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+}

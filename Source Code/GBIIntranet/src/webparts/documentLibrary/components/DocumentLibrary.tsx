@@ -23,7 +23,7 @@ export default class DocumentLibrary extends React.Component<IDocumentLibraryPro
 
       <div className="library-card" >
         <div className="overlay"></div>
-        <div className="content">
+        <div className="content1">
           <h3>Library Facilities</h3>
           <ul>
             <li>⭐ Reading Halls</li>
@@ -35,7 +35,7 @@ export default class DocumentLibrary extends React.Component<IDocumentLibraryPro
 
       <div className="library-card" >
         <div className="overlay"></div>
-        <div className="content">
+        <div className="content1">
           <h3>Library Services</h3>
           <ul>
             <li>⭐ Book Reservation & Renewals</li>
@@ -47,7 +47,7 @@ export default class DocumentLibrary extends React.Component<IDocumentLibraryPro
 
       <div className="library-card" >
         <div className="overlay"></div>
-        <div className="content">
+        <div className="content1">
           <h3>Digital Library</h3>
           <ul>
             <li>⭐ E-Books & PDFs</li>

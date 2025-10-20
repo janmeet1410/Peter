@@ -56,10 +56,10 @@
   font-size: 15px;
 }
 
-.policy-card::after {
+/* .policy-card::after {
   content: "";
   display: block;
   height: 1px;
   background: #e5e7eb;
   margin-top: 16px;
-}
+} */
