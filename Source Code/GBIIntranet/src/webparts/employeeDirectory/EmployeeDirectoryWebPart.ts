@@ -8,40 +8,45 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'OrgChartWebPartStrings';
-import OrgChart from './components/OrgChart';
-import { IOrgChartProps } from './components/IOrgChartProps';
-import { sp } from "@pnp/sp/presets/all";
+import * as strings from 'EmployeeDirectoryWebPartStrings';
+import EmployeeDirectory from './components/EmployeeDirectory';
+import { IEmployeeDirectoryProps } from './components/IEmployeeDirectoryProps';
+import { sp } from '@pnp/sp';
+import { graph } from '@pnp/graph';
 
-export interface IOrgChartWebPartProps {
+
+export interface IEmployeeDirectoryWebPartProps {
   description: string;
 }
 
-export default class OrgChartWebPart extends BaseClientSideWebPart<IOrgChartWebPartProps> {
+export default class EmployeeDirectoryWebPart extends BaseClientSideWebPart<IEmployeeDirectoryWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
-    // @pnp/sp inital setup
-    sp.setup({ spfxContext: this.context });
-
+    sp.setup({
+      spfxContext: this.context
+    });
+    graph.setup({
+      spfxContext: this.context
+    });
 
     return super.onInit();
   }
 
   public render(): void {
-    const element: React.ReactElement<IOrgChartProps> = React.createElement(
-      OrgChart,
+    const element: React.ReactElement<IEmployeeDirectoryProps> = React.createElement(
+      EmployeeDirectory,
       {
         description: this.properties.description,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
         userDisplayName: this.context.pageContext.user.displayName,
+        spfxContext: this.context,
         siteUrl: this.context.pageContext.web.absoluteUrl,
-        context: this.context
       }
     );
 

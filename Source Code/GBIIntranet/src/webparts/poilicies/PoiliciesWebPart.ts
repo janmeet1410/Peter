@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'PoiliciesWebPartStrings';
 import Poilicies from './components/Poilicies';
 import { IPoiliciesProps } from './components/IPoiliciesProps';
+import { sp } from "@pnp/sp/presets/all";
 
 export interface IPoiliciesWebPartProps {
   description: string;
@@ -23,6 +24,8 @@ export default class PoiliciesWebPart extends BaseClientSideWebPart<IPoiliciesWe
 
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
+    // @pnp/sp inital setup
+    sp.setup({ spfxContext: this.context });
 
     return super.onInit();
   }

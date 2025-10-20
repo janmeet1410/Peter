@@ -57,6 +57,14 @@
           "manifest": "./src/webparts/socialMedia/SocialMediaWebPart.manifest.json"
         }
       ]
+    },
+    "employee-directory-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/employeeDirectory/EmployeeDirectoryWebPart.js",
+          "manifest": "./src/webparts/employeeDirectory/EmployeeDirectoryWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -69,6 +77,7 @@
     "ExecutiveTeamWebPartStrings": "lib/webparts/executiveTeam/loc/{locale}.js",
     "SocialMediaWebPartStrings": "lib/webparts/socialMedia/loc/{locale}.js",
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
-    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "EmployeeDirectoryWebPartStrings": "lib/webparts/employeeDirectory/loc/{locale}.js"
   }
 }

@@ -1,34 +1,170 @@
-@import '~office-ui-fabric-react/dist/sass/References.scss';
+.orgContainer {
+  max-width: 1350px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 42px;
+  color: #222;
+}
 
 .orgChart {
-  overflow: hidden;
-  padding: 1em;
-  color: "[theme:bodyText, default: #323130]";
-  color: var(--bodyText);
-  &.teams {
-    font-family: $ms-font-family-fallbacks;
-  }
+  position: relative;
+  min-width: 700px;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling for iOS */
+  scrollbar-width: thin; /* Firefox scrollbar */
+}
+.level {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 72px;
+  width: max-content; /* Container width adapts to children */
+  min-width: 100%; /* Minimum full width */
+  flex-wrap: nowrap; /* Do NOT wrap children (members) */
 }
 
-.welcome {
+.topLevel {
+  justify-content: center;
+  margin-bottom: 44px;
+}
+
+.middleLevel {
+  gap: 60px;
+}
+
+.member {
+  background: #fff;
+  border: 1px solid #e2ebf4;
+  border-radius: 13px;
+  padding: 16px 6px 12px 6px;
   text-align: center;
+  position: relative;
+  box-shadow: 0 4px 11px rgba(68, 56, 109, 0.1);
+  margin: 0 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 140px;
 }
 
-.welcomeImage {
-  width: 100%;
-  max-width: 420px;
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background: #eee;
 }
 
-.links {
-  a {
-    text-decoration: none;
-    color: "[theme:link, default:#03787c]";
-    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+.member h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 4px 0 2px 0;
+}
 
-    &:hover {
-      text-decoration: underline;
-      color: "[theme:linkHovered, default: #014446]";
-      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
-    }
+.member p {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+}
+
+/* Connector lines */
+.lineUp,
+.lineDown {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  background-color: #bbb;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.lineUp {
+  top: -60px;
+  height: 60px;
+}
+
+.lineDown {
+  bottom: -60px;
+  height: 60px;
+}
+
+/* Connector between managerGroups */
+.managerGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 25px;
+  position: relative;
+}
+.managerGroup::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 2px;
+  height: 60px;
+  background-color: #bbb;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Subordinates under each manager */
+.subordinates {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 54px;
+  gap: 12px;
+}
+.subordinates::before {
+  content: "";
+  position: absolute;
+  top: -34px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background-color: #bbb;
+  z-index: 0;
+}
+
+.subordinates .member {
+  margin: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .managerGroup {
+    margin: 0 8px;
   }
+  .subordinates .member {
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .orgChart {
+    min-width: unset; /* allow full use of viewport */
+  }
+  .level {
+    overflow-x: auto;
+    min-width: 400px;
+  }
+  .member {
+    width: 110px;
+  }
+}
+
+.subLevel {
+  margin-top: 54px;
+  gap: 10px;
 }
