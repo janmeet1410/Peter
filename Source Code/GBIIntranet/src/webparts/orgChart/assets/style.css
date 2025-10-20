@@ -1,0 +1,30 @@
+.orgChart {
+  text-align: center;
+}
+
+.member {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 160px;
+  margin: 0 15px 50px 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.member img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+.subordinates {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}

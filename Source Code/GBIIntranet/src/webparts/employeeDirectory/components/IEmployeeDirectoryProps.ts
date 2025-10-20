@@ -1,9 +1,9 @@
-export interface IOrgChartProps {
+export interface IEmployeeDirectoryProps {
   description: string;
   isDarkTheme: boolean;
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  spfxContext: any;
   siteUrl: any;
-  context: any;
 }
