@@ -17,7 +17,7 @@ const InstagramEmbed = () => {
   return (
     <blockquote
       className="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/netunoseafoodimports/"
+      data-instgrm-permalink="https://www.instagram.com/goldsilverdotcom/?hl=en"
       data-instgrm-version="12"
       style={{
         background: "#FFF",
