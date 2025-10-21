@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'SocialMediaWebPartStrings';
 import SocialMedia from './components/SocialMedia';
 import { ISocialMediaProps } from './components/ISocialMediaProps';
+import { sp } from '@pnp/sp/presets/all';
 
 export interface ISocialMediaWebPartProps {
   description: string;
@@ -23,6 +24,9 @@ export default class SocialMediaWebPart extends BaseClientSideWebPart<ISocialMed
 
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
+    sp.setup({
+      spfxContext: this.context,
+    });
 
     return super.onInit();
   }
@@ -35,7 +39,8 @@ export default class SocialMediaWebPart extends BaseClientSideWebPart<ISocialMed
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        siteUrl: this.context.pageContext.web.absoluteUrl,
       }
     );
 

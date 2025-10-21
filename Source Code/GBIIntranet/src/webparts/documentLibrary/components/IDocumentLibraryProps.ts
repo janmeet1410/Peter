@@ -4,4 +4,5 @@ export interface IDocumentLibraryProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  serverrelativeUrl: any;
 }

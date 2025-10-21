@@ -14,6 +14,10 @@ import { IVisionMissionProps } from './components/IVisionMissionProps';
 
 export interface IVisionMissionWebPartProps {
   description: string;
+  missiontitle: string;
+  missiondescription: string;
+  visiontitle: string;
+  visiondescription: string;
 }
 
 export default class VisionMissionWebPart extends BaseClientSideWebPart<IVisionMissionWebPartProps> {
@@ -35,7 +39,11 @@ export default class VisionMissionWebPart extends BaseClientSideWebPart<IVisionM
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        missiontitle: this.properties.missiontitle ? this.properties.missiontitle : "Mission",
+        missiondescription: this.properties.missiondescription ? this.properties.missiondescription : "Empowering the world to preserve and grow their wealth through informed investing and seamless access to physical precious metals and other tangible assets.",
+        visiontitle: this.properties.visiontitle ? this.properties.visiontitle : "Vision",
+        visiondescription: this.properties.visiondescription ? this.properties.visiondescription : "To be the most trusted brand in physical precious metals investment, with an unwavering focus on superior products, comprehensive education, and exceptional service.",
       }
     );
 
@@ -77,15 +85,25 @@ export default class VisionMissionWebPart extends BaseClientSideWebPart<IVisionM
     return {
       pages: [
         {
-          header: {
-            description: strings.PropertyPaneDescription
-          },
           groups: [
             {
-              groupName: strings.BasicGroupName,
+              groupName: "Vision & Mission",
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                PropertyPaneTextField('visiontitle', {
+                  label: "Vision Title"
+                }),
+                PropertyPaneTextField('visiondescription', {
+                  label: "Vision Description",
+                  multiline: true,
+                  rows: 3
+                }),
+                PropertyPaneTextField('missiontitle', {
+                  label: "Mission Title"
+                }),
+                PropertyPaneTextField('missiondescription', {
+                  label: "Mission Description",
+                  multiline: true,
+                  rows: 3
                 })
               ]
             }

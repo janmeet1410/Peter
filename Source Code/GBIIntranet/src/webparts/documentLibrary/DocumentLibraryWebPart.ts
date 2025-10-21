@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'DocumentLibraryWebPartStrings';
 import DocumentLibrary from './components/DocumentLibrary';
 import { IDocumentLibraryProps } from './components/IDocumentLibraryProps';
+import { sp } from "@pnp/sp/presets/all";
 
 export interface IDocumentLibraryWebPartProps {
   description: string;
@@ -23,6 +24,8 @@ export default class DocumentLibraryWebPart extends BaseClientSideWebPart<IDocum
 
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
+    // @pnp/sp inital setup
+    sp.setup({ spfxContext: this.context });
 
     return super.onInit();
   }
@@ -35,7 +38,8 @@ export default class DocumentLibraryWebPart extends BaseClientSideWebPart<IDocum
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        serverrelativeUrl: this.context.pageContext.web.serverRelativeUrl,
       }
     );
 

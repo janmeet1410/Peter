@@ -4,4 +4,8 @@ export interface IVisionMissionProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  missiontitle: any;
+  missiondescription: any;
+  visiontitle: any;
+  visiondescription: any;
 }

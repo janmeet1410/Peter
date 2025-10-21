@@ -4,4 +4,5 @@ export interface ISocialMediaProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  siteUrl: any;
 }

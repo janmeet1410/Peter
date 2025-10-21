@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'ExecutiveTeamWebPartStrings';
 import ExecutiveTeam from './components/ExecutiveTeam';
 import { IExecutiveTeamProps } from './components/IExecutiveTeamProps';
+import { sp } from "@pnp/sp/presets/all";
 
 export interface IExecutiveTeamWebPartProps {
   description: string;
@@ -23,6 +24,8 @@ export default class ExecutiveTeamWebPart extends BaseClientSideWebPart<IExecuti
 
   protected onInit(): Promise<void> {
     this._environmentMessage = this._getEnvironmentMessage();
+    // @pnp/sp inital setup
+    sp.setup({ spfxContext: this.context });
 
     return super.onInit();
   }

@@ -3,12 +3,12 @@
 } */
 
 .library-section h2 {
-      font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #222;
-    margin-top: 0px;
-    font-family: sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+  margin-top: 0px;
+  font-family: sans-serif;
 }
 
 .library-cards {
@@ -30,6 +30,7 @@
   color: #fff;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
 }
 
 .library-card:hover {
@@ -40,10 +41,9 @@
 .library-card .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 65, 175, 0.8) 0%, rgba(255, 215, 0, 0.5) 100%),
-    url('../assets/lib.png');
-        background-size: cover;
-    background-repeat: no-repeat;
+  background: linear-gradient(90deg, rgba(0, 65, 175, 0.8) 0%, rgba(255, 215, 0, 0.5) 100%), url("../assets/lib.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .content1 {
@@ -52,7 +52,7 @@
   padding: 25px;
 }
 
-.library-section  .content1 h3 {
+.library-section .content1 h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 15px;

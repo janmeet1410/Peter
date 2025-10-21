@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import { useEffect } from "react";
 
 const InstagramEmbed = () => {
@@ -34,7 +34,7 @@ const InstagramEmbed = () => {
       <div style={{ padding: "16px" }}>
         <a
           id="main_link"
-          href="https://www.instagram.com/netunoseafoodimports/"
+          href="https://www.instagram.com/goldsilverdotcom/?hl=en"
           style={{
             background: "#FFFFFF",
             lineHeight: 0,
