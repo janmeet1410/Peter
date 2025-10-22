@@ -52,7 +52,7 @@ export default class EmployeeDirectory extends React.Component<IEmployeeDirector
         <div className="ms-Grid directory-container">
           <div className="ms-Grid-row">
             <div className="ms-Grid-col ms-sm12" style={{ textAlign: "center" }}>
-              <h2 className="directory-title">Employee Directory</h2>
+              {/* <h2 className="directory-title">Employee Directory</h2> */}
             </div>
             <div className="ms-Grid-col ms-sm12">
               <TextField

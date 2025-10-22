@@ -1,3 +1,15 @@
+  .EmpCustomHeader{
+        display: flex;
+    align-items: center;
+        justify-content: space-between;
+    align-items: center;
+}
+ .EmpCustomHeader img{
+        height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
 .spnUserDetails {
     font-size: 14px !important;
     overflow: hidden;
@@ -20,23 +32,25 @@
     background: #ffff;
     padding: 10px;
     height: auto;
-    /* border-radius: 5px; */
-    border: none;
-    border-bottom: 2px solid #007dc3;
+    border-radius: 27px;
+    /* border: none; */
+    border-bottom: 2px solid #0077CF;
     font-size: 24px;
     margin-bottom: 35px;
+    width: 50%;
+    margin: 25px auto 40px auto;
 }
 
 .directory-container {
-    background-color: #fff;
+    /* background-color: #fff;
     border: 1px solid #d5d5d5;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-right-radius: 10px; */
 
 }
 
 .directory-container  .ms-Pivot-link {
-    border-bottom: 1px solid #007dc3;
+    border-bottom: 1px solid #0077CF;
     margin-right: 8px;
     font-weight: 600;
     background: #fff;
@@ -44,20 +58,20 @@
 
 .directory-container  .ms-Pivot-link.is-selected {
     color: #ffffff !important;
-    background-color: #007dc3;
+    background-color: #0077CF;
 }
 /* .directory-container  .ms-Pivot-link.is-selected .ms-Pivot-text{
     color: #ffffff;
 } */
 .directory-container  .ms-Pivot-link:hover{
-    background-color: #007dc3;
+    background-color: #0077CF;
 
 }
 .directory-container .ms-Pivot-text{
     line-height: 40px;
 }
 .directory-container  .ms-Pivot-link.is-selected:hover{
-    background-color: #007dc3;
+    background-color: #0077CF;
 
 }
 .directory-container  .ms-TextField-fieldGroup::after {
@@ -65,7 +79,7 @@
 }
 
 .directory-title {
-    color: #007dc3;
+    color: #0077CF;
     font-size: 24px;
     margin-bottom: 35px;
     margin: 25px 0 25px 0;
@@ -87,7 +101,7 @@
     padding: 20px;
     margin-top: 40px;
     background: #ffffff;
-    border-bottom: 5px solid #007dc3;
+    border-bottom: 5px solid #0077CF;
     box-shadow: 10px 10px 10px #f1f1f1;
     height: 270px;
 }
@@ -108,14 +122,14 @@
 }
 
 .user-name {
-    color: #007dc3;
+    color: #0077CF;
     font-weight: 700;
     font-size: 18px;
 }
 
 .User-quicklinks i {
     padding: 12px;
-    color: #007dc3;
+    color: #0077CF;
     background-color: #ededed;
     font-size: 18px;
     border-radius: 50%;
@@ -165,4 +179,15 @@
 
 #CommentsWrapper {
     display: none !important;
+}
+
+@media (min-width: 280px) and (max-width: 767px) {
+
+.EmpCustomHeader{
+        justify-content: space-between;
+    align-items: center;
+}
+.refreshBTN{
+    width: 50px;
+}
 }

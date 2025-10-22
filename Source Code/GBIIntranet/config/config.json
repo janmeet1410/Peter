@@ -65,6 +65,14 @@
           "manifest": "./src/webparts/employeeDirectory/EmployeeDirectoryWebPart.manifest.json"
         }
       ]
+    },
+    "subbanner-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/subbanner/SubbannerWebPart.js",
+          "manifest": "./src/webparts/subbanner/SubbannerWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -78,6 +86,7 @@
     "SocialMediaWebPartStrings": "lib/webparts/socialMedia/loc/{locale}.js",
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
     "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
-    "EmployeeDirectoryWebPartStrings": "lib/webparts/employeeDirectory/loc/{locale}.js"
+    "EmployeeDirectoryWebPartStrings": "lib/webparts/employeeDirectory/loc/{locale}.js",
+    "SubbannerWebPartStrings": "lib/webparts/subbanner/loc/{locale}.js"
   }
 }
