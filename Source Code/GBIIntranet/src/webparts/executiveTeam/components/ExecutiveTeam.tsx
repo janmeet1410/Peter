@@ -19,7 +19,7 @@ export default class ExecutiveTeam extends React.Component<IExecutiveTeamProps, 
     const { description, isDarkTheme, environmentMessage, hasTeamsContext, userDisplayName } = this.props;
 
     return (
-      <section className="team">
+      <section id="ExecutiveTeam" className="team">
         <h2>Executive Team</h2>
         <div className="team-grid">
           {this.state.executiveTeams.length > 0 &&

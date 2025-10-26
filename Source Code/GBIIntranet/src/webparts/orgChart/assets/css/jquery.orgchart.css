@@ -172,7 +172,7 @@
     left: calc(50% - 1px);
     width: 2px;
     height: 9px;
-    background-color: #ed222430;
+    /* background-color: #ed222430; */
 }
 
 .orgchart>ul>li>ul li.isSiblingsCollapsed>.node::before {

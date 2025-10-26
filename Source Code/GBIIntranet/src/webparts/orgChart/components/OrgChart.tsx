@@ -9,14 +9,16 @@ import { SPComponentLoader } from "@microsoft/sp-loader";
 import * as $ from "jquery";
 
 // require('Jquery');
+require("../assets/css/jquery.orgchart.css");
 require("../assets/css/style.css");
+
 /* Importing Js */
 require("../assets/js/jquery.min.js");
 // require('./js/jquery.orgchart.js');
 require("../assets/js/jquery.orgchart.js");
 
 SPComponentLoader.loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js");
-SPComponentLoader.loadCss("https://cdnjs.cloudflare.com/ajax/libs/orgchart/3.4.0/css/jquery.orgchart.min.css");
+// SPComponentLoader.loadCss("https://cdnjs.cloudflare.com/ajax/libs/orgchart/3.4.0/css/jquery.orgchart.min.css");
 SPComponentLoader.loadScript("https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js");
 SPComponentLoader.loadScript("https://cdnjs.cloudflare.com/ajax/libs/orgchart/3.5.0/js/jquery.orgchart.min.js");
 
@@ -57,9 +59,10 @@ export default class OrgChart extends React.Component<IOrgChartProps, IOrgChartS
                 ) : (
                   <>
                     <div className="canvas-div">
+                          <h2 className="organization-chart-page-title">Org Structure</h2>
+
                       <div id="chart-container">
                         <div className="organization-chart-page-heading">
-                          <h2 className="organization-chart-page-title">ORGANIZATION DIRECTORY</h2>
                           {/* <button className="expand-collapse-button" id="expand-btn">EXPAND ALL</button> */}
                         </div>
                       </div>
