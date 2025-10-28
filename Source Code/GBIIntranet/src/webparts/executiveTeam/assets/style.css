@@ -19,6 +19,7 @@
   border-radius: 16px;
   overflow: hidden;
   background: linear-gradient(135deg, #dfe9f3 0%, #ffffff 100%);
+  height: 320px;
 }
 
 .team-card img {

@@ -24,7 +24,7 @@ export default class SocialMedia extends React.Component<ISocialMediaProps, ISoc
     return (
       <section>
         <div className="Stay_Connected">
-          <h2 className="Stay_Connected_title">Stay Connected</h2>
+          <h2 className="Stay_Connected_title">Social Media</h2>
           <div className="p-15">
             {/* <iframe style={{ border: "none" }} height={"420px"} width={"100%"} data-tweet-url="https://www.linkedin.com/company/netuno-usa-inc" src="data:text/html;charset=utf-8,%3Ca%20class%3D%22twitter-timeline%22%20href%3D%22https%3A//twitter.com/iZOOlogic%3Fref_src%3Dtwsrc%255Etfw%22%3ETweets%20by%20iZOOlogic%3C/a%3E%0A%3Cscript%20async%20src%3D%22https%3A//platform.twitter.com/widgets.js%22%20charset%3D%22utf-8%22%3E%3C/script%3E%0A"></iframe> */}
             <div className="ms-Grid">
