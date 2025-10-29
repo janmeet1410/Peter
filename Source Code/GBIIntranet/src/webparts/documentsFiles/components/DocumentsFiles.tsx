@@ -5,6 +5,7 @@ import { escape } from "@microsoft/sp-lodash-subset";
 import { sp } from "@pnp/sp/presets/all";
 import { Icon } from "office-ui-fabric-react";
 
+require('../assets/style.css')
 export interface IDocumentsFilesState {
   departmentFiles: any;
 }
@@ -21,14 +22,14 @@ export default class DocumentsFiles extends React.Component<IDocumentsFilesProps
 
     return (
       <div>
-        <h3>Benefits Files</h3>
+        {/* <h3>Benefits Files</h3> */}
         <div className="newswrapper">
           {this.state.departmentFiles.length > 0 &&
             this.state.departmentFiles.map((file, ind) => {
               return (
                 <a href={file.Url} target="_blank" data-interception="off" className="file-item" key={ind}>
                   {/* Bind image only if item is "url type" (link) */}
-                  {file.IsLinkType && file.ImageUrl ? <img src={file.ImageUrl} alt={file.Name} style={{ maxWidth: 40, maxHeight: 40, marginRight: 8 }} /> : <Icon iconName="FabricFolder" />}
+                  {file.IsLinkType && file.ImageUrl ? <img src={file.ImageUrl} alt={file.Name} style={{ maxWidth: 90, maxHeight: 40, marginRight: 8 }} /> : <Icon iconName="FabricFolder" />}
                   <div>{file.Name}</div>
                 </a>
               );
@@ -60,6 +61,7 @@ export default class DocumentsFiles extends React.Component<IDocumentsFilesProps
           "Image" // <-- Image column
         )
         .expand("File", "Folder", "File/Author")
+        // .filter('ID eq 12')
         .top(5000)
         .get();
 
@@ -76,9 +78,11 @@ export default class DocumentsFiles extends React.Component<IDocumentsFilesProps
         // Only bind if link type (you may use alternative logic, e.g., custom column)
         const isLinkType = !isFolder && item.File.Name.toLowerCase().endsWith(".url");
         // Modern SharePoint Image column returns an object. Use ?. syntax in case null
+        let imgtemp  = item.Image ? JSON.parse(item.Image) : null
+    const serverRelativeUrl = imgtemp ? imgtemp.serverRelativeUrl : null;
         const imageUrl =
-          item.Image && typeof item.Image === "object"
-            ? item.Image.serverRelativeUrl || item.Image.Url // Try both keys for compatibility
+          item.Image 
+            ? serverRelativeUrl || item.Image.Url // Try both keys for compatibility
             : null;
         // Fallback image if not found
         const fallback = require("../assets/iconDoc.png");
