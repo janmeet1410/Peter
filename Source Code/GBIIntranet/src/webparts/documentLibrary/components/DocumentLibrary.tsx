@@ -91,8 +91,10 @@ export default class DocumentLibrary extends React.Component<IDocumentLibraryPro
 
       // Only items under the specified folder (direct children only)
       // const items = allItems.filter((item) => item.FileDirRef === folderServerRelativeUrl.replace(/^\//, ""));
+      // Only items in root directory (no folders, no subfolders)
+      const mainItems = allItems.filter((item) => item.FileDirRef === folderServerRelativeUrl);
 
-      const mappedItems = allItems.map((item) => {
+      const mappedItems = mainItems.map((item) => {
         const isFolder = !!item.Folder;
         const name = isFolder ? item.Folder.Name : item.File.Name;
         const url = isFolder ? item.Folder.ServerRelativeUrl : item.File.ServerRelativeUrl + "?web=1";
