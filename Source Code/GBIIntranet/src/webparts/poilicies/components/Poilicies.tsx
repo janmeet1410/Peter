@@ -90,7 +90,7 @@ export default class Poilicies extends React.Component<IPoiliciesProps, IPoilici
 
   public componentDidMount = async () => {
     await this.getPolicyDetails();
-  };
+  }
 
   // get quick links details from Quick Links sharepoint list
   private getPolicyDetails = async () => {
@@ -103,5 +103,5 @@ export default class Poilicies extends React.Component<IPoiliciesProps, IPoilici
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 }

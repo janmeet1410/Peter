@@ -72,7 +72,7 @@ export default class ExecutiveTeam extends React.Component<IExecutiveTeamProps, 
   }
   public componentDidMount = async () => {
     await this.getExecutiveTeamsDetails();
-  };
+  }
 
   // get executive teams details from Executive Teams sharepoint list
   private getExecutiveTeamsDetails = async () => {
@@ -85,5 +85,5 @@ export default class ExecutiveTeam extends React.Component<IExecutiveTeamProps, 
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 }

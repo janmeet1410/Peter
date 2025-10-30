@@ -82,7 +82,7 @@ export default class DocumentLibrary extends React.Component<IDocumentLibraryPro
 
   public componentDidMount = async () => {
     await this.getResourcesFiles();
-  };
+  }
 
   private getResourcesFiles = async () => {
     try {
@@ -118,5 +118,5 @@ export default class DocumentLibrary extends React.Component<IDocumentLibraryPro
     } catch (error) {
       console.error("Error fetching root resources with department:", error);
     }
-  };
+  }
 }

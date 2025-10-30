@@ -218,7 +218,7 @@ export default class OrgChart extends React.Component<IOrgChartProps, IOrgChartS
           }
         });
     });
-  };
+  }
 
   /* For Node Template */
   public nodeTemplate = (data) => {
@@ -233,7 +233,7 @@ export default class OrgChart extends React.Component<IOrgChartProps, IOrgChartS
        </div>
     `;
     //  <div class="externalLink"><img src="${require("./images/external-link.png")}" /></div>
-  };
+  }
 
   /* Function For Binding Org Chart */
   private bindOrgChart = (): void => {
@@ -247,5 +247,5 @@ export default class OrgChart extends React.Component<IOrgChartProps, IOrgChartS
         nodeTemplate: myThis.nodeTemplate,
       });
     });
-  };
+  }
 }

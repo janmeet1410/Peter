@@ -5,7 +5,7 @@ import { escape } from "@microsoft/sp-lodash-subset";
 import { sp } from "@pnp/sp/presets/all";
 import { Icon } from "office-ui-fabric-react";
 
-require('../assets/style.css')
+require('../assets/style.css');
 export interface IDocumentsFilesState {
   departmentFiles: any;
 }
@@ -41,7 +41,7 @@ export default class DocumentsFiles extends React.Component<IDocumentsFilesProps
 
   public componentDidMount = async () => {
     await this.getDepartmentFiles();
-  };
+  }
 
   private getDepartmentFiles = async () => {
     try {
@@ -78,7 +78,7 @@ export default class DocumentsFiles extends React.Component<IDocumentsFilesProps
         // Only bind if link type (you may use alternative logic, e.g., custom column)
         const isLinkType = !isFolder && item.File.Name.toLowerCase().endsWith(".url");
         // Modern SharePoint Image column returns an object. Use ?. syntax in case null
-        let imgtemp  = item.Image ? JSON.parse(item.Image) : null
+        let imgtemp  = item.Image ? JSON.parse(item.Image) : null;
     const serverRelativeUrl = imgtemp ? imgtemp.serverRelativeUrl : null;
         const imageUrl =
           item.Image 
@@ -103,5 +103,5 @@ export default class DocumentsFiles extends React.Component<IDocumentsFilesProps
     } catch (error) {
       console.error("Error fetching files with department:", error);
     }
-  };
+  }
 }

@@ -222,7 +222,7 @@ export default class EmployeeDirectory extends React.Component<IEmployeeDirector
         }
       });
     }
-  };
+  }
 
   // function for sort date
   private SortDate = (a, b) => {
@@ -231,7 +231,7 @@ export default class EmployeeDirectory extends React.Component<IEmployeeDirector
       let dateB = b.DisplayName.toLowerCase();
       return dateA > dateB ? 1 : -1;
     }
-  };
+  }
 
   // function to set pagination
   public pagination(crntPage, libraryData) {
@@ -282,5 +282,5 @@ export default class EmployeeDirectory extends React.Component<IEmployeeDirector
     });
     this.setState({ profileProperties: SearchUser });
     this.pagination(this.state.currentPage, SearchUser);
-  };
+  }
 }

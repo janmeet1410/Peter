@@ -38,7 +38,7 @@ export default class Banner extends React.Component<IBannerProps, IBannerState> 
             this.state.quickLinks.map((ele, ind) => {
               let imageURL = ele.AttachmentFiles.length > 0 ? ele.AttachmentFiles[0].ServerRelativeUrl : ele.Icon ? JSON.parse(ele.Icon).serverRelativeUrl : require(`../assets/Images/computer.png`);
               return (
-                <a href={ele.Link ? ele.Link.Url : "#"} className="card">
+                <a target="_blank" data-interception="off" href={ele.Link ? ele.Link.Url : "#"} className="card">
                   <img src={imageURL} alt={ele.Title} />
                   <p>{ele.Title}</p>
                 </a>
@@ -71,7 +71,7 @@ export default class Banner extends React.Component<IBannerProps, IBannerState> 
 
   public componentDidMount = async () => {
     await this.getQuickLinksDetails();
-  };
+  }
 
   // get quick links details from Quick Links sharepoint list
   private getQuickLinksDetails = async () => {
@@ -84,5 +84,5 @@ export default class Banner extends React.Component<IBannerProps, IBannerState> 
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 }

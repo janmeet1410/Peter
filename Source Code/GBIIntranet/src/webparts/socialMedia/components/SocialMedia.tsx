@@ -79,7 +79,7 @@ export default class SocialMedia extends React.Component<ISocialMediaProps, ISoc
 
   public componentDidMount = async () => {
     this.loadVideos();
-  };
+  }
 
   private loadVideos = async () => {
     try {
@@ -96,5 +96,5 @@ export default class SocialMedia extends React.Component<ISocialMediaProps, ISoc
     } catch (error) {
       console.error("Error loading videos:", error);
     }
-  };
+  }
 }
