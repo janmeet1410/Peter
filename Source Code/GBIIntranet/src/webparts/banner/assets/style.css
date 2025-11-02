@@ -1,6 +1,9 @@
 * {
   font-family: sans-serif;
 }
+i{
+      font-family: "Fluent MDL2 Hybrid Icons" !important;
+}
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -10,6 +13,9 @@
   color: white;
   padding: 20px 80px;
   flex-wrap: wrap;
+      flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-content {
@@ -74,4 +80,16 @@
 .quicklinks .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .hero-section{
+        flex-direction: column-reverse;
+    padding: 20px;
+  }
+  .card-section{
+        padding: 45px 10px;
+  }
+
 }

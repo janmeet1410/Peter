@@ -21,7 +21,7 @@ export default class Poilicies extends React.Component<IPoiliciesProps, IPoilici
     return (
       <section>
         <div className="policies-container">
-          <h2>Policies</h2>
+          {/* <h2>Policies</h2> */}
           {this.state.policies.length > 0 &&
             this.state.policies.map((ele, ind) => {
               return (

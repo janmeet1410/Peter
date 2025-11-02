@@ -25,3 +25,7 @@
 .file-item img{
     margin-bottom: 10px;
 }
+.newswrapper img {
+    height: 50px !important;
+    object-fit: contain;
+}

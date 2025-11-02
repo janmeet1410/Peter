@@ -55,7 +55,7 @@ export default class NewsAndAnnouncements extends React.Component<INewsAndAnnoun
     };
 
     return (
-      <section className={`CompanyNewsMain ${styles.newsAndAnnouncements}`}>
+      <section >
         <div className="container">
           {/* <div className='BreakingNewContainer'>
             <div><img src={require("../assets/Icons/BreakingNews.png")} /></div>
@@ -70,7 +70,7 @@ export default class NewsAndAnnouncements extends React.Component<INewsAndAnnoun
                 this.state.CompanyNewsData.map((news, nwIdx) => {
                   let imageURL = news.AttachmentFiles.length > 0 ? news.AttachmentFiles[0].ServerRelativeUrl : news.Image ? JSON.parse(news.Image).serverRelativeUrl : require(`../assets/Icons/BreakingNews.png`);
                   return (
-                    <div className="newsMain">
+                    <a  href={news.URL ? news.URL.Url : "#"} className="newsMain">
                       <div>
                         <img src={imageURL} />
                       </div>
@@ -79,7 +79,7 @@ export default class NewsAndAnnouncements extends React.Component<INewsAndAnnoun
                           <p className="New-description">{news.Description}</p>
                         </a>
                       </div>
-                    </div>
+                    </a>
                   );
                 })}
             </Slider>
