@@ -12,10 +12,16 @@ import * as strings from 'BannerWebPartStrings';
 import Banner from './components/Banner';
 import { IBannerProps } from './components/IBannerProps';
 import { sp } from "@pnp/sp/presets/all";
+import {
+  PropertyFieldFilePicker,
+  IPropertyFieldFilePickerProps,
+  IFilePickerResult,
+} from "@pnp/spfx-property-controls/lib/PropertyFieldFilePicker";
 
 export interface IBannerWebPartProps {
   description: string;
   bannerdescription: string;
+  bannerImage: IFilePickerResult;
 }
 
 export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartProps> {
@@ -41,6 +47,7 @@ export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartP
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
         userDisplayName: this.context.pageContext.user.displayName,
         bannerdescription: this.properties.bannerdescription ? this.properties.bannerdescription : "Discover GBI's Leading Institutional Grade Physical Precious Metals Platform.",
+        bannerImage: this.properties.bannerImage,
       }
     );
 
@@ -90,7 +97,25 @@ export default class BannerWebPart extends BaseClientSideWebPart<IBannerWebPartP
                   label: "Banner Description",
                   multiline: true,
                   rows: 3
-                })
+                }),
+                PropertyFieldFilePicker("bannerImage", {
+                  context: this.context,
+                  onPropertyChange: this.onPropertyPaneFieldChanged.bind(this),
+                  properties: this.properties,
+                  onSave: (e: IFilePickerResult) => {
+                    console.log(e);
+                    this.properties.bannerImage = e;
+                  },
+                  onChanged: (e: IFilePickerResult) => {
+                    console.log(e);
+                    this.properties.bannerImage = e;
+                  },
+                  buttonLabel: "Upload Image",
+                  label: "Banner Image",
+                  key: "FilePickerID",
+                  filePickerResult: this.properties.bannerImage,
+                  hideLocalUploadTab: true,
+                }),
               ]
             }
           ]
