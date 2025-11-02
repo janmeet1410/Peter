@@ -53,7 +53,7 @@ export default class EmployeeDirectory extends React.Component<IEmployeeDirector
         <div className="ms-Grid directory-container">
           <div className="ms-Grid-row">
             <div className="ms-Grid-col ms-sm12" style={{ textAlign: "center" }}>
-              <h2 className="EmpCustomHeader">
+              {/* <h2 className="EmpCustomHeader">
                 <div>Employee Directory</div>
                 <PrimaryButton
                   className="refreshBTN"
@@ -65,7 +65,7 @@ export default class EmployeeDirectory extends React.Component<IEmployeeDirector
                 >
                   Refresh Data
                 </PrimaryButton>
-              </h2>
+              </h2> */}
             </div>
             <div className="ms-Grid-col ms-sm12" style={{ textAlign: "center" }}></div>
             <div className="ms-Grid-col ms-sm12">

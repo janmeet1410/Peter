@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Avenir-Light';
+  src: url('https://gbi.co/wp-content/themes/mytheme/fonts/Avenir-Medium.woff2') format('woff2');
+}
+
 * {
-    font-family: sans-serif !important;
+  font-family: 'Avenir-Light' !important;
 }
 
 .organization-chart-page-title

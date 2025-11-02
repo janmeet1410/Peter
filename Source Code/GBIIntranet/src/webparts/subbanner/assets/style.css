@@ -1,6 +1,22 @@
-* {
-  font-family: sans-serif;
+@font-face {
+  font-family: 'Avenir-Light';
+  src: url('https://gbi.co/wp-content/themes/mytheme/fonts/Avenir-Medium.woff2') format('woff2');
 }
+
+
+/* @font-face {
+  font-family: 'Avenir-Black';
+  src: url('../assets//Avenir-Black.woff2');
+}
+@font-face {
+  font-family: 'Avenir-Heavy';
+  src: url('../assets/Avenir-Heavy.woff2');
+} */
+
+* {
+  font-family: 'Avenir-Light';
+}
+
 .hero-section {
   display: flex;
   justify-content: space-between;
