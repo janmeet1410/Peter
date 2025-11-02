@@ -17,6 +17,7 @@ export default class Banner extends React.Component<IBannerProps, IBannerState> 
     };
   }
   public render(): React.ReactElement<IBannerProps> {
+    const PortfolioImageLink = this.props.bannerImage == undefined ? require("../assets/Images/sideimg.png") : this.props.bannerImage.fileAbsoluteUrl;
     return (
       <>
         <section className="hero-section">
@@ -30,7 +31,7 @@ export default class Banner extends React.Component<IBannerProps, IBannerState> 
             <h1>{this.props.bannerdescription}</h1>
           </div>
           <div className="hero-image">
-            <img src={require("../assets/Images/sideimg.png")} alt="Business Woman" />
+            <img src={PortfolioImageLink} alt="Business Woman" />
           </div>
         </section>
         <section className="card-section quicklinks">
@@ -71,7 +72,7 @@ export default class Banner extends React.Component<IBannerProps, IBannerState> 
 
   public componentDidMount = async () => {
     await this.getQuickLinksDetails();
-  }
+  };
 
   // get quick links details from Quick Links sharepoint list
   private getQuickLinksDetails = async () => {
@@ -84,5 +85,5 @@ export default class Banner extends React.Component<IBannerProps, IBannerState> 
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 }
