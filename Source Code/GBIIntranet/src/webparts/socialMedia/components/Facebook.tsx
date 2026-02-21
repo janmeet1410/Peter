@@ -15,9 +15,9 @@ const FacebookPageEmbed = () => {
   return (
     <div>
       <div id="fb-root"></div>
-      <div className="fb-page" data-href="https://www.facebook.com/profile.php?id=61566839543514" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true" data-width="600">
-        <blockquote cite="https://www.facebook.com/profile.php?id=61566839543514" className="fb-xfbml-parse-ignore">
-          <a href="https://www.facebook.com/profile.php?id=61566839543514">Ergo Global</a>
+      <div className="fb-page" data-href="https://www.facebook.com/SpecialtyRx/" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true" data-width="600">
+        <blockquote cite="https://www.facebook.com/SpecialtyRx/" className="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/SpecialtyRx/">SpecialtyRx </a>
         </blockquote>
       </div>
     </div>
